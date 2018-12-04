@@ -1,0 +1,689 @@
+﻿
+## Story 01
+User: greet
+Bot: utter_greet
+Bot: utter_ask_what_canhelp
+User: request_deaf{"item": "双耳", "domain": "耳聋遗传疾病","degree":"极重度", "deaf_type":"感音神经性耳聋"}
+Bot: utter_ask_name
+User: enter_data{"nr": "王二"}
+Bot: action_store_name
+Bot: utter_ask_age
+User: enter_data{"age": "1岁"}
+Bot: action_store_age
+Bot: utter_ask_gender
+User: enter_data{"gender": "女"}
+Bot: action_store_gender
+Bot: utter_ask_phonenum
+User: enter_data{"phone_number": "188 8888 8888"}
+Bot: action_store_phone_number
+Bot: utter_ask_jobfunction
+User: enter_data{"jobfunction": "公务员"}
+Bot: action_store_jobfunction
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+User: response_ear_symptom{"item": "双耳", "ear_symptom": "无流脓"}
+Bot: utter_ask_how_long
+User: enter_data{"time": "出生后"}
+Bot: utter_ask_what_time_heavier
+User: enter_data{"heavy_time": "6个月"}
+Bot: utter_ask_head_trauma
+User: response_head_trauma{"head_trauma": "无外伤"} OR deny
+Bot: utter_ask_medical_symptom
+User: response_medical_symptom{"ear_symptom": "无流脓","head_symptom": "头晕","speak_symptom": "说话清楚","eye_symptom": "眼睛色泽正常","neck_symptom": "颈部正常"} OR deny
+Bot: utter_ask_what_other_symptom
+User: response_other_symptom OR deny
+Bot: utter_ask_what_treatment
+User: response_treatment OR deny
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"} OR deny
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"} OR deny
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+User: confirm
+Bot: utter_ask_what_genetic_test_result
+User: response_genetic_test_result{"genetic":"GJB2基因"}
+Bot: action_store_genetic
+Bot: action_store_medical_symptom
+Bot: action_infer_deaf_type
+User: request_medical_advice
+Bot: action_offer_medical_advice
+Bot: action_store_user_info
+Bot: action_revert
+Bot: utter_ask_morehelp
+User: thanks
+Bot: utter_thanks
+Bot: utter_goodbye
+Bot: action_revert
+
+## Story 02
+User: greet
+Bot: utter_greet
+Bot: utter_ask_what_canhelp
+User: request_deaf{"item": "双耳", "domain": "耳聋遗传疾病","degree":"极重度", "deaf_type":"感音神经性耳聋"}
+Bot: utter_ask_name
+User: enter_data{"nr": "王二"}
+Bot: action_store_name
+Bot: utter_ask_age
+User: enter_data{"age": "1岁"}
+Bot: action_store_age
+Bot: utter_ask_gender
+User: enter_data{"gender": "女"}
+Bot: action_store_gender
+Bot: utter_ask_phonenum
+User: enter_data{"phone_number": "188 8888 8888"}
+Bot: action_store_phone_number
+Bot: utter_ask_jobfunction
+User: enter_data{"jobfunction": "公务员"}
+Bot: action_store_jobfunction
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+User: response_ear_symptom{"item": "双耳", "ear_symptom": "无流脓"}
+Bot: utter_ask_how_long
+User: enter_data{"time": "出生后"}
+Bot: utter_ask_what_time_heavier
+User: enter_data{"heavy_time": "6个月"}
+Bot: utter_ask_head_trauma
+User: response_head_trauma{"head_trauma": "无外伤"}
+Bot: utter_ask_medical_symptom
+User: response_medical_symptom{"ear_symptom": "无流脓","head_symptom": "头晕","speak_symptom": "说话清楚","eye_symptom": "眼睛色泽正常","neck_symptom": "颈部正常"}
+Bot: utter_ask_what_other_symptom
+User: response_other_symptom
+Bot: utter_ask_what_treatment
+User: response_treatment
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+User: deny
+Bot: utter_recommended_genetic_testing
+Bot: utter_goodbye
+Bot: action_revert
+
+## Story 03
+User: greet
+Bot: utter_greet
+Bot: utter_ask_what_canhelp
+User: request_deaf{"item": "双耳", "domain": "耳聋遗传疾病","degree":"极重度", "deaf_type":"感音神经性耳聋"}
+Bot: utter_ask_name
+User: enter_data{"nr": "王二"}
+Bot: action_store_name
+Bot: utter_ask_age
+User: enter_data{"age": "1岁"}
+Bot: action_store_age
+Bot: utter_ask_gender
+User: enter_data{"gender": "女"}
+Bot: action_store_gender
+Bot: utter_ask_phonenum
+User: enter_data{"phone_number": "188 8888 8888"}
+Bot: action_store_phone_number
+Bot: utter_ask_jobfunction
+User: enter_data{"jobfunction": "公务员"}
+Bot: action_store_jobfunction
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+User: response_ear_symptom{"item": "双耳", "ear_symptom": "无流脓"}
+Bot: utter_ask_how_long
+User: enter_data{"time": "出生后"}
+Bot: utter_ask_what_time_heavier
+User: enter_data{"heavy_time": "6个月"}
+Bot: utter_ask_head_trauma
+User: response_head_trauma{"head_trauma": "无外伤"}
+Bot: utter_ask_medical_symptom
+User: response_medical_symptom{"ear_symptom": "无流脓","head_symptom": "头晕","speak_symptom": "说话清楚","eye_symptom": "眼睛色泽正常","neck_symptom": "颈部正常"}
+Bot: utter_ask_what_other_symptom
+User: response_other_symptom
+Bot: utter_ask_what_treatment
+User: response_treatment
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: deny
+Bot: utter_recommended_item_testing
+Bot: utter_goodbye
+Bot: action_revert
+
+## Story 031
+User: greet
+Bot: utter_greet
+Bot: utter_ask_what_canhelp
+User: request_deaf{"item": "双耳", "domain": "耳聋遗传疾病","degree":"极重度", "deaf_type":"感音神经性耳聋"}
+Bot: utter_ask_name
+User: enter_data{"nr": "王二"}
+Bot: action_store_name
+Bot: utter_ask_age
+User: enter_data{"age": "1岁"}
+Bot: action_store_age
+Bot: utter_ask_gender
+User: enter_data{"gender": "女"}
+Bot: action_store_gender
+Bot: utter_ask_phonenum
+User: enter_data{"phone_number": "188 8888 8888"}
+Bot: action_store_phone_number
+Bot: utter_ask_jobfunction
+User: enter_data{"jobfunction": "公务员"}
+Bot: action_store_jobfunction
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+User: response_ear_symptom{"item": "双耳", "ear_symptom": "无流脓"}
+Bot: utter_ask_how_long
+User: enter_data{"time": "出生后"}
+Bot: utter_ask_what_time_heavier
+User: enter_data{"heavy_time": "6个月"}
+Bot: utter_ask_head_trauma
+User: response_head_trauma{"head_trauma": "无外伤"}
+Bot: utter_ask_medical_symptom
+User: response_medical_symptom{"head_symptom": "头晕","speak_symptom": "说话清楚","eye_symptom": "眼睛色泽正常","neck_symptom": "颈部正常"}
+Bot: utter_ask_what_other_symptom
+User: response_other_symptom
+Bot: utter_ask_what_treatment
+User: response_treatment
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: deny
+Bot: utter_recommended_inspection_item
+Bot: utter_goodbye
+Bot: action_revert
+
+## Story 04
+User: enter_data{"jobfunction": "公务员"}
+Bot: action_store_jobfunction
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+User: response_ear_symptom{"item": "双耳", "ear_symptom": "无流脓"}
+Bot: utter_ask_how_long
+User: enter_data{"time": "出生后"}
+Bot: utter_ask_what_time_heavier
+User: enter_data{"heavy_time": "6个月"}
+Bot: utter_ask_head_trauma
+User: response_head_trauma{"head_trauma": "无外伤"}
+Bot: utter_ask_medical_symptom
+User: response_medical_symptom{"head_symptom": "头晕","speak_symptom": "说话清楚","eye_symptom": "眼睛色泽正常","neck_symptom": "颈部正常"}
+Bot: utter_ask_what_other_symptom
+User: response_other_symptom
+Bot: utter_ask_what_treatment
+User: response_treatment
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+
+## Story 05
+User: response_head_trauma{"head_trauma": "无外伤"}
+Bot: utter_ask_medical_symptom
+User: response_medical_symptom{"head_symptom": "头晕","speak_symptom": "说话清楚","eye_symptom": "眼睛色泽正常","neck_symptom": "颈部正常"}
+Bot: utter_ask_what_other_symptom
+User: response_other_symptom
+Bot: utter_ask_what_treatment
+User: response_treatment
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+
+## Story 06
+User: response_treatment
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+
+## Story 07
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+
+## Story 08
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+
+## Story 09
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+
+## Story 091
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+
+## Story 10
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+
+## Story 11
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+User: confirm
+Bot: utter_ask_what_genetic_test_result
+User: response_genetic_test_result{"genetic":"GJB2基因"}
+Bot: action_store_genetic
+Bot: action_store_medical_symptom
+Bot: action_infer_deaf_type
+
+## Story 12
+Bot: utter_ask_what_genetic_test_result
+User: response_genetic_test_result{"genetic":"GJB2基因"}
+Bot: action_store_genetic
+Bot: action_store_medical_symptom
+Bot: action_infer_deaf_type
+
+## Story 13
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+User: response_ear_symptom{"item": "双耳", "ear_symptom": "无流脓"}
+Bot: utter_ask_how_long
+User: enter_data{"time": "出生后"}
+Bot: utter_ask_what_time_heavier
+User: enter_data{"heavy_time": "6个月"}
+Bot: utter_ask_head_trauma
+User: response_head_trauma{"head_trauma": "无外伤"}
+Bot: utter_ask_medical_symptom
+User: response_medical_symptom{"head_symptom": "头晕","speak_symptom": "说话清楚","eye_symptom": "眼睛色泽正常","neck_symptom": "颈部正常"}
+Bot: utter_ask_what_other_symptom
+User: response_other_symptom
+Bot: utter_ask_what_treatment
+User: response_treatment
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+
+## Story 14
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+User: confirm
+Bot: utter_ask_what_genetic_test_result
+User: response_genetic_test_result{"genetic":"GJB2基因"}
+Bot: action_store_genetic
+Bot: action_store_medical_symptom
+Bot: action_infer_deaf_type
+User: request_medical_advice
+Bot: action_offer_medical_advice
+Bot: action_store_user_info
+Bot: action_revert
+Bot: utter_ask_morehelp
+
+## Story 15
+Bot: utter_ask_whether_genetic_test
+User: confirm
+Bot: utter_ask_what_genetic_test_result
+User: response_genetic_test_result{"genetic":"GJB2基因"}
+Bot: action_store_genetic
+Bot: action_store_medical_symptom
+Bot: action_infer_deaf_type
+User: request_medical_advice
+Bot: action_offer_medical_advice
+Bot: action_store_user_info
+Bot: action_revert
+Bot: utter_ask_morehelp
+
+## Story 16
+Bot: utter_ask_name
+User: enter_data{"nr": "王二"}
+Bot: action_store_name
+Bot: utter_ask_age
+User: enter_data{"age": "1岁"}
+Bot: action_store_age
+Bot: utter_ask_gender
+User: enter_data{"gender": "女"}
+Bot: action_store_gender
+Bot: utter_ask_phonenum
+User: enter_data{"phone_number": "188 8888 8888"}
+Bot: action_store_phone_number
+Bot: utter_ask_jobfunction
+User: enter_data{"jobfunction": "公务员"}
+Bot: action_store_jobfunction
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+
+## Story 17
+Bot: utter_ask_name
+User: enter_data{"nr": "王二"}
+Bot: action_store_name
+Bot: utter_ask_age
+User: enter_data{"age": "1岁"}
+Bot: action_store_age
+Bot: utter_ask_gender
+User: enter_data{"gender": "女"}
+Bot: action_store_gender
+Bot: utter_ask_phonenum
+User: enter_data{"phone_number": "188 8888 8888"}
+Bot: action_store_phone_number
+Bot: utter_ask_jobfunction
+User: enter_data{"jobfunction": "公务员"}
+Bot: action_store_jobfunction
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+User: response_ear_symptom{"item": "双耳", "ear_symptom": "无流脓"}
+Bot: utter_ask_how_long
+User: enter_data{"time": "出生后"}
+Bot: utter_ask_what_time_heavier
+User: enter_data{"heavy_time": "6个月"}
+Bot: utter_ask_head_trauma
+User: response_head_trauma{"head_trauma": "无外伤"}
+Bot: utter_ask_medical_symptom
+User: response_medical_symptom{"head_symptom": "头晕","speak_symptom": "说话清楚","eye_symptom": "眼睛色泽正常","neck_symptom": "颈部正常"}
+Bot: utter_ask_what_other_symptom
+User: response_other_symptom
+Bot: utter_ask_what_treatment
+User: response_treatment
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+User: deny
+Bot: utter_recommended_genetic_testing
+Bot: utter_goodbye
+Bot: action_revert
+
+## Story 18
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+User: response_ear_symptom{"item": "双耳", "ear_symptom": "无流脓"}
+Bot: utter_ask_how_long
+User: enter_data{"time": "出生后"}
+Bot: utter_ask_what_time_heavier
+User: enter_data{"heavy_time": "6个月"}
+Bot: utter_ask_head_trauma
+User: response_head_trauma{"head_trauma": "无外伤"}
+Bot: utter_ask_medical_symptom
+User: response_medical_symptom{"ear_symptom": "无流脓","head_symptom": "头晕","speak_symptom": "说话清楚","eye_symptom": "眼睛色泽正常","neck_symptom": "颈部正常"}
+Bot: utter_ask_what_other_symptom
+User: response_other_symptom
+Bot: utter_ask_what_treatment
+User: response_treatment
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+User: confirm
+Bot: utter_ask_what_genetic_test_result
+User: response_genetic_test_result{"genetic":"GJB2基因"}
+Bot: action_store_genetic
+Bot: action_store_medical_symptom
+Bot: action_infer_deaf_type
+
+## Story 18
+Bot: utter_ask_name
+User: enter_data{"nr": "王二"}
+Bot: action_store_name
+Bot: utter_ask_age
+User: enter_data{"age": "1岁"}
+Bot: action_store_age
+Bot: utter_ask_gender
+User: enter_data{"gender": "女"}
+Bot: action_store_gender
+Bot: utter_ask_phonenum
+User: enter_data{"phone_number": "188 8888 8888"}
+Bot: action_store_phone_number
+Bot: utter_ask_jobfunction
+User: enter_data{"jobfunction": "公务员"}
+Bot: action_store_jobfunction
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+User: response_ear_symptom{"item": "双耳", "ear_symptom": "无流脓"}
+Bot: utter_ask_how_long
+User: enter_data{"time": "出生后"}
+Bot: utter_ask_what_time_heavier
+User: enter_data{"heavy_time": "6个月"}
+Bot: utter_ask_head_trauma
+User: response_head_trauma{"head_trauma": "无外伤"}
+Bot: utter_ask_medical_symptom
+User: response_medical_symptom{"head_symptom": "头晕","speak_symptom": "说话清楚","eye_symptom": "眼睛色泽正常","neck_symptom": "颈部正常"}
+Bot: utter_ask_what_other_symptom
+User: response_other_symptom
+Bot: utter_ask_what_treatment
+
+## Story 19
+Bot: utter_ask_what_treatment
+User: response_treatment
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+User: confirm
+Bot: utter_ask_what_genetic_test_result
+User: response_genetic_test_result{"genetic":"GJB2基因"}
+Bot: action_store_genetic
+Bot: action_store_medical_symptom
+Bot: action_infer_deaf_type
+
+## Story 20
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+User: response_ear_symptom{"item": "双耳", "ear_symptom": "无流脓"}
+Bot: utter_ask_how_long
+User: enter_data{"time": "出生后"}
+Bot: utter_ask_what_time_heavier
+User: enter_data{"heavy_time": "6个月"}
+Bot: utter_ask_head_trauma
+User: response_head_trauma{"head_trauma": "无外伤"}
+Bot: utter_ask_medical_symptom
+User: response_medical_symptom{"head_symptom": "头晕","speak_symptom": "说话清楚","eye_symptom": "眼睛色泽正常","neck_symptom": "颈部正常"}
+Bot: utter_ask_what_other_symptom
+User: response_other_symptom
+Bot: utter_ask_what_treatment
+User: response_treatment
+Bot: utter_ask_whether_deafness_family_history
+User: response_family_history{"patient":"母亲"}
+Bot: utter_ask_whether_taking_drug
+User: response_taking_drug{"drug":"耳毒性药物"}
+Bot: utter_ask_what_taking_drug_result
+User: response_taking_drug_result{"drug_result":"耳鸣"}
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+
+## Story 21
+Bot: utter_ask_what_inspection_item
+User: response_inspection_item
+Bot: utter_ask_what_inspection_item_result
+User: response_inspection_result{"degree":"极重度","deaf_type":"感音神经性耳聋","inspection_symptom":"听力障碍"}
+Bot: utter_ask_what_item_testing
+User: response_testing_item
+Bot: utter_ask_what_testing_result
+User: response_testing_result{"result_symptom":"甲状腺肿大"}
+Bot: utter_ask_whether_genetic_test
+User: deny
+Bot: utter_recommended_genetic_testing
+Bot: utter_goodbye
+Bot: action_revert
+
+## Story 22
+Bot: utter_ask_what_canhelp
+User: request_deaf{"item": "双耳", "domain": "耳聋遗传疾病","degree":"极重度", "deaf_type":"感音神经性耳聋"}
+Bot: utter_ask_name
+User: enter_data{"nr": "王二"}
+Bot: action_store_name
+Bot: utter_ask_age
+User: enter_data{"age": "1岁"}
+Bot: action_store_age
+Bot: utter_ask_gender
+User: enter_data{"gender": "女"}
+Bot: action_store_gender
+Bot: utter_ask_phonenum
+User: enter_data{"phone_number": "188 8888 8888"}
+Bot: action_store_phone_number
+Bot: utter_ask_jobfunction
+User: enter_data{"jobfunction": "公务员"}
+Bot: action_store_jobfunction
+Bot: utter_ask_which_ears
+User: response_which_ear{"item": "双耳"}
+Bot: utter_ask_what_ears_symptom
+
+## Story 23
+User: response_genetic_test_result{"genetic":"GJB2基因"}
+Bot: action_store_genetic
+Bot: action_store_medical_symptom
+Bot: action_infer_deaf_type
+User: request_medical_advice
+Bot: action_offer_medical_advice
+Bot: action_store_user_info
+Bot: action_revert
+Bot: utter_ask_morehelp
+
